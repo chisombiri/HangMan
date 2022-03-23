@@ -1,0 +1,131 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    flex-flow: column;
+    height: 80vh;
+    overflow: hidden;
+    align-items: center;
+    margin: 0;
+    background-color: #660000;
+    color: #fff;
+}
+
+.game-container{
+    padding: 18px 28px;
+    position: relative;
+    margin: auto;
+    height: 480px;
+    width: 480px;
+}
+
+h1{
+    margin: 18px 0 0;
+}
+
+.figure-container{
+    fill: transparent;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-width: 4px;
+}
+
+.man-part{
+    display: none;
+}
+
+.wrong-letters-div{
+    position: absolute;
+    top: 24px;
+    right: 16px;
+    display: flex;
+    flex-flow: column;
+    text-align: right;
+}
+
+.wrong-letters-div p{
+    margin: 0 0 4px;
+}
+
+.wrong-letters-div span{
+    margin: 0 4px;
+    font-size: 1.3rem;
+}
+
+.word{
+    display: flex;
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.letter{
+    border-bottom: 2px solid #f82f2f;
+    display: inline-flex;
+    font-size: 1.6rem;
+    align-items: center;
+    justify-content: center;
+    margin: 0 4px;
+    height: 40px;
+    width: 16px;
+}
+
+.endgame-messages{
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup{
+    background-color: #be0202;
+    border-radius: 6px;
+    box-shadow: 0 16px 10px 3px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    text-align: center;
+}
+
+.popup button{
+    cursor: pointer;
+    border: none;
+    color: #be0202;
+    background-color: #fff;
+    margin-top: 16px;
+    padding: 14px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+.popup button:focus{
+    outline: 0;
+}
+
+.popup button:active{
+    transform: scale(0.96);
+}
+
+.notification-container{
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 16px 24px;
+    border-radius: 8px 8px 0 0;
+    position: absolute;
+    bottom: -50px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.notification-container.show{
+    transform: translateY(-50px);
+}
+
+.notification-container p{
+    margin: 0;
+}

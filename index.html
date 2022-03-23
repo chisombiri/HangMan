@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="hang.png">
+    <link rel="stylesheet" href="style.css">
+    <title>HangMan</title>
+</head>
+<body>
+    <h1>Hang Man</h1>
+    <p>Find the hidden Word - Guess the letters!</p>
+    <div class="game-container">
+        <svg height="260" width="210" class="figure-container">
+
+            <!-- Hanging Pole -->
+            <line x1="20" y1="250" x2="100" y2="250" />
+            <line x1="60" y1="20" x2="60" y2="250" />
+            <line x1="60" y1="20" x2="150" y2="20" />
+            <line x1="150" y1="20" x2="150" y2="55" />
+
+            <!-- The stick man -->
+            <!--Stick man head-->
+            <circle cx="150" cy="78" r="20" class="man-part"/>
+
+            <!--Stick man body, arms and legs-->
+            <line x1="150" y1="98" x2="150" y2="160" class="man-part"/>
+            <line x1="150" y1="120" x2="120" y2="100" class="man-part"/>
+            <line x1="150" y1="120" x2="180" y2="100" class="man-part"/>
+            <line x1="150" y1="160" x2="120" y2="190" class="man-part"/>
+            <line x1="150" y1="160" x2="180" y2="190" class="man-part"/>
+        </svg>
+
+        <div class="wrong-letters-div">
+            <div id="wrong-letters"></div>
+        </div>
+
+        <div class="word" id="word"></div>
+    </div>
+
+    <!--End of Game Container-->
+    <div class="endgame-messages" id="endgame-messages">
+        <div class="popup">
+            <h2 id="final-message"></h2>
+            <button id="play-again">Play Again</button>
+        </div>
+    </div>
+
+    <!--Notification for used letters-->
+    <div class="notification-container" id="notification-container">
+        <p>You have alreadey entered this letter</p>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
